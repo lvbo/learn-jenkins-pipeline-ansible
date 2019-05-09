@@ -5,7 +5,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 ansiblePlaybook(
-                    playbook: "${env.WORKSPACE}/playbook.yml"
+                    playbook: "${env.WORKSPACE}/playbook.yml",
                     inventory: "${env.WORKSPACE}/host",
                     credentialsId: 'vagrant'
                 )
