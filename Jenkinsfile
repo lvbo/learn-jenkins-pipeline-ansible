@@ -6,7 +6,7 @@ pipeline {
             steps {
                 ansiblePlaybook(
                     playbook: "${env.WORKSPACE}/playbook.yml",
-                    inventory: "${env.WORKSPACE}/host",
+                    inventory: "${env.WORKSPACE}/hosts",
                     credentialsId: 'vagrant'
                 )
             }

@@ -1,0 +1,5 @@
+---
+- name: Copy application WAR file to host
+  copy:
+    src: jboss-helloworld.war
+    dest: /tmp
